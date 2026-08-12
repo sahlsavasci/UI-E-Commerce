@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Cartitemsamples extends StatelessWidget {
-  const Cartitemsamples({super.key});
+class CartItemSamples extends StatelessWidget {
+  const CartItemSamples({super.key});
 
   @override
   Widget build(BuildContext context) {

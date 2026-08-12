@@ -1,7 +1,7 @@
+import 'package:e_commerce/widgets/CartAppBar.dart';
+import 'package:e_commerce/widgets/CartBottomNavbar.dart';
+import 'package:e_commerce/widgets/CartItemSamples.dart';
 import 'package:flutter/material.dart';
-import 'package:ui_ecommerce/widgets/CartAppBar.dart';
-import 'package:ui_ecommerce/widgets/CartBottomNavbar.dart';
-import 'package:ui_ecommerce/widgets/CartItemSamples.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
