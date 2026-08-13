@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:e_commerce/pages/account_page.dart';
 import 'package:e_commerce/pages/cart_page.dart';
 import 'package:e_commerce/widgets/CategoriesWidget.dart';
-import 'package:e_commerce/widgets/HomeAppBar.dart';
 import 'package:e_commerce/widgets/ItemsWidget.dart';
-import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class HomePage extends StatefulWidget {
