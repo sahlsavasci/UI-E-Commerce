@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ChatListPage extends StatelessWidget {
   ChatListPage({super.key});
-  
+
   final List<Map<String, String>> chats = [
     {
       'name': 'Nike Official',
@@ -12,12 +12,12 @@ class ChatListPage extends StatelessWidget {
     },
     {
       'name': 'Expander',
-
       'message': 'Halo, Selamat Datang di Nike Official.',
       'time': '12:05',
       'avatar': 'images/5.jpg',
     },
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,31 +32,47 @@ class ChatListPage extends StatelessWidget {
         ),
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Color(0xFF4C53A5)),
-        actions: [IconButton(icon: const Icon(Icons.search), onPressed: () {})],
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 8),
         color: Colors.white,
-        child: Row(
+        child: Column(
           children: [
-            TextButton(
-              onPressed: () {},
-              child: const Text(
-                'Semua',
-                style: TextStyle(
-                  color: Color(0xFF4C53A5),
-                  fontWeight: FontWeight.bold,
-                ),
+            // Baris Filter Tombol
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 8),
+              child: Row(
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Semua',
+                      style: TextStyle(
+                        color: Color(0xFF4C53A5),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Belum Dibaca',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 114, 123, 216),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(width: 10),
-            TextButton(
-              onPressed: () {},
-              child: const Text(
-                'Belum Dibaca',
-                style: TextStyle(color: Color.fromARGB(255, 114, 123, 216)),
-              ),
-            ),
+            
+            // Daftar Chat
             Expanded(
               child: ListView.builder(
                 itemCount: chats.length,
@@ -64,9 +80,7 @@ class ChatListPage extends StatelessWidget {
                   final chat = chats[index];
                   return ListTile(
                     leading: CircleAvatar(
-                      backgroundImage: AssetImage(
-                        chat['avatar']!,
-                      ), // Ganti NetworkImage dengan AssetImage
+                      backgroundImage: AssetImage(chat['avatar']!),
                       radius: 25,
                     ),
                     title: Text(
@@ -84,7 +98,7 @@ class ChatListPage extends StatelessWidget {
                             fontSize: 12,
                           ),
                         ),
-                        if (index == 0) // Misalnya, jika ada pesan belum dibaca
+                        if (index == 0) // Lencana notifikasi untuk pesan belum dibaca
                           Container(
                             margin: const EdgeInsets.only(top: 5),
                             padding: const EdgeInsets.all(6),
@@ -106,10 +120,6 @@ class ChatListPage extends StatelessWidget {
                       Navigator.pushNamed(
                         context,
                         "ChatDetail",
-                        // arguments: {
-                        //   'contactName': chat['name']!,
-                        //   'avatarAsset': chat['avatar']!,
-                        // },
                       );
                     },
                   );
