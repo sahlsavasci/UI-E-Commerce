@@ -7,7 +7,7 @@ class AccountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Account'),
+        title: const Text('Account', style: TextStyle(color: Colors.white)),
         backgroundColor: const Color(0xFF4C53A5),
       ),
       body: SingleChildScrollView(
@@ -190,4 +190,3 @@ void _showLogoutDialog(BuildContext context) {
     },
   );
 }
-

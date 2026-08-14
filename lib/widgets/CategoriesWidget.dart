@@ -28,7 +28,7 @@ class CategoriesWidget extends StatelessWidget {
               child: Row(
                 children: [
                   Image.asset(
-                    'images/categories/${i + 1}.jpg', // Pastikan gambar sesuai dengan indeks
+                    'images/categories/${i + 1}.png', // Pastikan gambar sesuai dengan indeks
                     width: 40,
                     height: 40,
                   ),

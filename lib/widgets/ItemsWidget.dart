@@ -56,7 +56,7 @@ class ItemsWidget extends StatelessWidget {
                   child: Container(
                     margin: const EdgeInsets.all(10),
                     child: Image.asset(
-                      'images/items/${i + 1}.jpg',
+                      'images/items/${i + 1}.png',
                       height: 100,
                       width: 100,
                     ),
