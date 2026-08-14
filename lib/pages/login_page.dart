@@ -109,7 +109,7 @@ Widget _buildLoginButton(BuildContext context) {
   return ElevatedButton(
     onPressed: () {
       if (_formKey.currentState!.validate()) {
-        Navigator.pushReplacementNamed(context, 'AccountPage');
+        Navigator.pushReplacementNamed(context, 'HomePage');
       }
     },
     style: ElevatedButton.styleFrom(

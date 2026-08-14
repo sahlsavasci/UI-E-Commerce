@@ -12,7 +12,7 @@ class CartAppBar extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              Navigator.pushNamed(context, '/');
+              Navigator.pushNamed(context, 'HomePage');
             },
             child: const Icon(
               Icons.arrow_back_ios,
